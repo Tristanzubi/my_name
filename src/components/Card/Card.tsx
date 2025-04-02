@@ -1,14 +1,16 @@
 import "./Card.css"
 
-interface Name {
+interface CardProps {
   name: string;
   num: string;
+  imgSrc: string;
 }
 
-function Card({ name, num }: Name) {
+function Card({ name, num, imgSrc }: CardProps) {
   return (
     <figure>
-      <p>{name}</p>
+      <img src={imgSrc} alt={name} />
+      <figcaption>{name}</figcaption>
       <p>{num}</p>
     </figure>
   )
